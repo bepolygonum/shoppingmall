@@ -1,11 +1,19 @@
+server:
+  port: 7000
 # mysql
 spring:
+  application:
+    name: member
   datasource:
     #MySQL配置
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ums?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: a20110213
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 
 mybatis-plus:
   mapperLocations: classpath:mapper/**/*.xml

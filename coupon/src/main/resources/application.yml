@@ -1,5 +1,12 @@
-# mysql
+server:
+  port: 6006
 spring:
+  application:
+    name: coupon
+  cloud:
+    nacos:
+      discovery:
+        server‐addr: 127.0.0.1:8848
   datasource:
     #MySQL配置
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -12,3 +19,4 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+
