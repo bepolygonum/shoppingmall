@@ -1,12 +1,12 @@
 server:
-  port: 6006
+  port: 6007
 spring:
   application:
     name: coupon
   cloud:
     nacos:
       discovery:
-        server‐addr: 127.0.0.1:8848
+        server‐addr: 127.0.0.1:6006
   datasource:
     #MySQL配置
     driverClassName: com.mysql.cj.jdbc.Driver
