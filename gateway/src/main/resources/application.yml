@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+#      http://localhost:88/?url=baidu
+        -  id: baidu-route
+           uri: https://www.baidu.com
+           predicates:
+           -  Query=url,baidu
+
+#      http://localhost:88/?url=qq
+        -  id: qq-route
+           uri: https://www.qq.com
+           predicates:
+           -  Query=url,qq
